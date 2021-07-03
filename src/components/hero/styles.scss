@@ -1,0 +1,41 @@
+@import '../../styles';
+
+.hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    align-items: center;
+    width:100%;
+    overflow:hidden;
+
+
+    &.mobile {
+        .hero-container {
+            flex-direction: column-reverse;
+            padding-bottom: 24px;
+
+            img {
+                padding-bottom: 24px;
+            }
+        }
+    }
+
+    .hero-container {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        display: flex;
+        width:100%;
+        z-index: 2;
+
+        img {
+            width:100%;
+            z-index: 1;
+        }
+    }
+}
+
+@include tablet {
+    .hero {
+        display: block;
+    }
+}

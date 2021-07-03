@@ -1,0 +1,84 @@
+@import '../../styles';
+
+.pricing {
+    position: relative;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    overflow: hidden;
+    @extend %rajdhani-f;
+    .pricing-container {
+        grid-column: 2;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    .cards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .card {
+            border: 3px solid $gizmor-grey;
+            text-align: center;
+            margin: 20px;
+            border-radius: 20px;
+            overflow: hidden;
+            .card-container {
+                .title {
+                    background-color: $gizmor-blue;
+                    padding: 16px;
+                    color:$white;
+                    h1 {
+                        font-size: $L;
+                        font-weight: normal;
+                    }
+                }
+
+                .line {
+                    height: 6px;
+                    width: 100%;
+                    background: rgba(0, 0, 0, 0.21);
+                }
+
+                h1 {
+                    margin-top:8px;
+                    font-size: $L;
+                    font-weight: normal;
+                }
+
+                p {
+                    font-size: $S;
+                }
+
+                .option {
+                    margin: 0px 12px;
+                    display: flex;
+                    align-items: center;
+                    p {
+                        text-align: left;
+                        font-size: $SM;
+                        margin: 12px;
+                    }
+                }
+
+                .btn {
+                    margin: 16px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+@include tablet {
+    .pricing {
+        display: block;
+        .pricing-container {
+            .cards {
+                flex-direction: column;
+            }
+        }
+    }
+}

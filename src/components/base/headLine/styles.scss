@@ -1,0 +1,30 @@
+@import '../../../styles';
+
+.hl {
+    display: flex;
+    align-items: center;
+    @extend %rajdhani-f;
+    h1 { font-size: $XL; }
+    p { font-size: $SM; }
+    img {
+        height: 320px;
+    }
+}
+
+.hl--l {
+    text-align: left;
+    .text {
+        margin-right: 64px;
+    }
+}
+.hl--c {
+    text-align: center;
+    justify-content: center;
+}
+.hl--r {
+    text-align: right;
+    flex-direction: row-reverse;
+    .text {
+        margin-left: 64px;
+    }
+}

@@ -1,0 +1,27 @@
+@import '../../styles';
+
+.howitworks {
+    position: relative;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    overflow: hidden;
+
+    .howitworks-container {
+        grid-column: 2;
+
+        .hl:first-child {
+            margin: 0px
+        }
+
+        .hl {
+            margin: 64px 0;
+        }
+    }
+}
+
+@include tablet {
+    .howitworks {
+        display: block;
+    }
+}
+

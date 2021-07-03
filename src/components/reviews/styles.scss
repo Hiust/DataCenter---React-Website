@@ -1,0 +1,82 @@
+@import '../../styles';
+
+.reviews {
+    position: relative;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    color:$white;
+    @extend %rajdhani-f;
+
+    .reviews-container {
+        grid-column: 2;
+        display: flex;
+
+        .left-side {
+            width:100%;
+            margin-top: 80px;
+            margin-left: 24px;
+            margin-right: 128px;
+            img {
+                margin-top: 80px;
+                height: 390px;
+            }
+        }
+
+        .right-side {
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+            justify-content:space-around;
+
+            .review {
+                width: 100%;
+                color: $black;
+                background-color: $white;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 40px 40px 12px rgba(0, 0, 0, 0.25);
+
+                .review-container {
+                    display: grid;
+                    grid-template-columns: 15% 65% 10%;
+                    align-items: center;
+                    margin: 20px;
+
+                    .img {
+                        background: $gizmor-grey;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50px;
+                    }
+
+                    h1 {
+                        font-size: $M;
+                    }
+
+                    p {
+                        font-size: $S;
+                        grid-column-start: 2;
+                        grid-column-end: 4;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include tablet {
+    .reviews {
+        display: block;
+
+        .reviews-container {
+            flex-direction: column;
+
+            .right-side {
+                margin:16px;
+                .review {
+                    margin:18px;
+                }
+            }
+        }
+    }
+}

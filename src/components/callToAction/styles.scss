@@ -1,0 +1,25 @@
+@import '../../styles';
+
+.calltoaction {
+    position: relative;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    overflow: hidden;
+    height: 460px;
+    align-items: center;
+
+    .calltoaction-container {
+        grid-column: 2;
+        width: 100%;
+        text-align: center;
+
+        .hl {
+            margin:24px
+        }
+
+        .btn {
+            padding:14px 48px;
+        }
+    }
+}
+

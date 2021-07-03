@@ -1,0 +1,78 @@
+@import '../../../styles';
+
+.navbar {
+    height:80px;
+    display: grid;
+    grid-template-columns: auto 60% auto;
+    justify-content: center;
+    @extend %rajdhani-f;
+
+    .navbar-container {
+        grid-column-start: 2;
+        grid-row-end: 2;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 80px;
+
+        .navbar-logo {
+            cursor: pointer;
+            text-decoration: none;
+            color: $black;
+            font-size: $L;
+        }
+
+        .nav-menu {
+            position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+
+            .nav-item {
+                .nav-links {
+                    margin: 24px;
+                    text-decoration: none;
+                    color: $black;
+                    font-size: $SM;
+                }
+            }
+
+            &.active {
+                display: block;
+                position: absolute;
+                top:80px;
+                background: $white;
+                width:100%;
+                height:auto;
+                z-index: 5;
+
+                .nav-item {
+                    text-align: center;
+                    padding: 16px;
+                    border-top: 1px solid $black;
+                }
+            }
+        }
+    }
+}
+
+@include tablet  {
+    .navbar {
+        display: block;
+        .navbar-container {
+            .navbar-logo {
+                margin: 0 24px;
+            }
+
+            .menu-icon {
+                margin: 0 24px;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,56 @@
+@import '../../../styles';
+
+.footer {
+    position: relative;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    overflow: hidden;
+    @extend %rajdhani-f;
+    .footer-container {
+        grid-column: 2;
+        display: flex;
+        justify-content: space-between;
+
+        .info {
+            h1 {
+                text-align: left;
+                font-size: $SL;
+            }
+
+            p {
+                text-align: left;
+                font-size: $SM;
+            }
+
+        }
+
+        .links {
+            h1 {
+                font-size: $SL;
+            }
+            text-decoration: none;
+            color: black;
+            p {
+                margin: 16px 0;
+                font-size: $SM;
+                text-align: left;
+            }
+
+            img {
+                margin:16px 8px;
+                height:50px
+            }
+        }
+    }
+    p {
+        grid-column: 2;
+        text-align: center;
+    }
+}
+
+@include tablet {
+    .footer {
+        display: block;
+    }
+}
+
